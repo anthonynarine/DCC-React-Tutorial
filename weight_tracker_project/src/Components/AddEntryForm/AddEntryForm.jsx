@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const AddEntryForm = ({addNewEntry}) => {
+const AddEntryForm = (porps) => {
     const [weight, setweight] = useState(1);
     const [date, setDate] = useState("");
 
@@ -11,7 +11,7 @@ const AddEntryForm = ({addNewEntry}) => {
             date: date
         };
         console.log(newEntry)
-        addNewEntry(newEntry);
+        porps.addNewEntry(newEntry);
     }
 
 
@@ -23,9 +23,7 @@ const AddEntryForm = ({addNewEntry}) => {
             <input type="date"  value={date} onChange={(event) => setDate(event.target.value)} />
             <button type="submit">Add</button>
         </form>
-
      );
-
 };
 
  

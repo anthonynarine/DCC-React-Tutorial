@@ -11,7 +11,7 @@ const DisplayEnteries = ({parentEntries}) => {
         <tbody>
             {parentEntries.map((entry, index) =>{
                 return(
-                    <tr>
+                    <tr key={index}>
                         <td>{index + 1}</td>
                         <td>{entry.weight}</td>
                         <td>{entry.date}</td>
@@ -24,3 +24,6 @@ const DisplayEnteries = ({parentEntries}) => {
 }
  
 export default DisplayEnteries;
+
+//entries is passed to DisplayEntries via destructured props from Apps.
+{/* <DisplayEnteries parentEntries={entries}/> */}
