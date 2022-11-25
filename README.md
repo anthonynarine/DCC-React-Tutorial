@@ -2,17 +2,44 @@
 
 The goal of this app is to show content on the screen
 and how its going to change over time using EVENT handler
-and useState function. 
+and useState function. Updateing the State and passing
+up from a child to parent and down from a parent to child
+component.  
 
     Main React Concepts built into this project:
     1. Events and listening for events
     2. State and updating state
 
 
-    Components must be
+    Components must be:
         1. exported from their file
         2. imported in App.js
         3. instantiated in APP.js
+            <DisplayEntries />
+    
+    ~ since entries is a child component of App.js
+    ~ we pass the state variable entries down by createing our own
+      attributes on the  instantiated component.
+
+       <DisplayEnteries parentEntries={entries}/>
+
+       we create our own attribute (parentEntries) and 
+       set it = to the {entries} state variable we want to pass 
+       this can now be passed from App.js to DisplayEntries
+       to be mapped. 
+
+the data is destructured from props as show below
+               
+        {parentEntries.map((entry, index) =>{
+                return(
+                    <tr>
+                        <td>{index + 1}</td>
+                        <td>{entry.weight}</td>
+                        <td>{entry.date}</td>
+                    </tr>
+                );
+            })}
+
 
 
                ~ Updating Weight and Date using a Form  ~

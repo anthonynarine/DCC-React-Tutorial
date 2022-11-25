@@ -1,6 +1,6 @@
 const DisplayEnteries = ({parentEntries}) => {
     return ( 
-        <tabl>
+        <table>
         <thead>
             <tr>
                 <th>Entry Number</th>
@@ -19,7 +19,7 @@ const DisplayEnteries = ({parentEntries}) => {
                 );
             })}
         </tbody>
-    </tabl>
+    </table>
      );
 }
  
